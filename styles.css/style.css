@@ -1,222 +1,339 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
+
     font-family: "", sans-serif;
+
     
 }
 /* top-navbar */
-.top-navbar{
+/* Top Navbar */
+
+.top-navbar {
+    background-color: beige;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
     display: flex;
     justify-content: space-between;
-}
-.top-navbar p{
-    margin-top: 13px;
-    margin-left: 15px;
-    color: darkslateblue;
-    text-shadow: -1px 1px 1px black;
-}
-.top-navbar .icons{
-    margin-top: 13px;
-    margin-left: 15px;
-}
-.top-navbar a{
-    text-decoration: none;
-    color: purple;
-    margin-left: 10px;
-    text-shadow: -1px 1px 1px black;
-}
-.top-navbar a img{
-    margin-bottom: 3px;
-}
-.top-navabar a:hover{
-    color: black;
-}
-@media screen and(max-width:400px){
-    .top-navbar a{
-        font-size: 13px;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .top-navbar:hover {
+    background-color: #b058c0;
+  }
+  
+  .top-navbar p {
+    margin-bottom: 0;
+    transition: color 0.3s ease;
+  }
+  
+  .top-navbar:hover p {
+    color: #ccc;
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+    animation: fadeIn 1s ease-in-out 0.5s;
+  }
+  
+  .icons:hover {
+    transform: translateY(-5px);
+  }
+  
+  .icons a {
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .icons:hover a {
+    color: #ccc;
+  }
+  
+  /* Add animation to the hamburger menu icon */
+  
+  .navbar-toggler {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    animation: fadeIn 1s ease-in-out 0.5s;
+  }
+  
+  .navbar-toggler:hover {
+    background-color: #444;
+  }
+  
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .navbar-toggler:active {
+    transform: translateY(2px);
+  }
+  
+  .navbar-toggler.collapsed:hover {
+    background-color: transparent;
+  }
+  
+  .navbar-toggler.collapsed:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .navbar-toggler.collapsed:active {
+    transform: none;
+  }
+  
+  /* Add animation to the navbar links */
+  
+  .nav-link {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    animation: fadeIn 1s ease-in-out 0.5s;
+  }
+  
+  .nav-link:hover {
+    color: #ccc;
+    background-color: #444;
+  }
+  
+  .nav-link.active {
+    color: blue;
+    
+  }
+ 
+  
+  .dropdown-menu {
+    background-color: #333;
+    border: none;
+    padding: 10px;
+    border-radius: 0;
+    transition: opacity 0.3s ease;
+    animation: fadeIn 1s ease-in-out 0.5s;
+  }
+  
+  .dropdown-menu.show {
+    opacity: 1;
+  }
+  
+  .dropdown-item {
+    color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.2s ease;
+    animation: fadeIn 1s ease-in-out 0.5s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .dropdown-item.active {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  /* Add animation to the whole top-navbar */
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
     }
-    .top-navbar a img{
-        width: 15px;
+    100% {
+      opacity: 1; transform: translateY(0);
     }
-    .top-navbar p{
-        font-size: 13px;
-    }
-}
-@media screen and(max-width:320px){
-    .top-navbar a{
-        font-size: 10px;
-    }
-    .top-navbar a img{
-        width: 13px;
-    }
-    .top-navbar p{
-        font-size: 10px;
-    }
-}
-@media screen and(max-width:3180px){
-    .top-navbar a{
-        font-size: 8px;
-        margin-left: 0;
-    }
-    .top-navbar a img{
-        width: 10px;
-        margin-left: 0;
-    }
-    .top-navbar p{
-        font-size: 10px;
-        margin-top: 20px;
-    }
-}
+  }
 /* top-navbar */
 /* navbar */
-#navbar{
-    background-color: rgb(67 0 86);
-}
-#logo{
-    margin-left: 15px;
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 6px;
-}
-#logo span{
-    color: #ffc800;
-}
-#logo #span1{
-    font-size: 30px;
-}
-.navbar-nav{
-    margin-left: 20px;
-}
-.nav-item{
-    margin-left: 10px;
-}
-.nav-item .nav-link{
-    color: white;
-    margin-left: 2px;
-    text-shadow: 0px 0px 1px black;
-    transition: 0.5s ease;
-}
-.nav-item .nav-link:hover{
-    color: #ffc800;
-}
-.dropdown-menu li a{
-    color: white;
-    transition: 0.5s ease;
-}
-.dropdown-menu li a:hover{
-    background-color: rgb(67, 0, 87);
-    color: #ffc800;
-}
-#search input{
-    border-radius: 50px;
+/* Navbar */
+
+.navbar {
+    background-color: cadetblue;
+    color: black;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .navbar:hover {
+    background-color:cadetblue
+  }
+  .navbar a span{
+    color: blue;
+  }
+  
+  .navbar-brand {
+    font-size: 2rem;
+    transition: color 0.3s ease;
+    color: beige;
+  }
+  
+  .navbar-brand:hover {
+    color:antiquewhite;
+  }
+  
+  .nav-link {
+    color: black;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    animation: fadeIn 1s ease-in-out 0.5s;
+  }
+  
+  .nav-link:hover {
+    background-color: burlywood;
+  }
+  
+  
+  .dropdown-menu {
+    background-color: cadetblue;
     border: none;
-}
-#search button{
-    border-radius: 50px;
-    color: white;
-    border: 1px solid #ffc800;
-    background-color: #ffc800;
-}
+    padding: 10px;
+    border-radius: 0;
+    transition: opacity 0.3s ease;
+    animation: fadeIn 1s ease-in-out 0.5s;
+  }
+  
+  .dropdown-menu.show {
+    opacity: 1;
+  }
+  
+  .dropdown-item {
+    color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.2s ease;
+    animation: fadeIn 1s ease-in-out 0.5s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .dropdown-item.active {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  /* Add animation to the whole navbar */
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1; transform: translateY(0);
+    }
+  }
 /* navbar */
 
+/* Styles for the home-content section */
+.home-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    padding: 50px; /* Padding around the content */
+    background-color: #f8f9fa; /* Light background color */
+    position: relative; /* Position relative for absolute elements */
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Styles for the content text */
+.home-content .content {
+    flex: 1; /* Allow content to take available space */
+    padding-right: 20px; /* Right padding for spacing */
+}
+
+/* Styles for the heading */
+.home-content h1 {
+    font-size: 2.5rem; /* Font size for the heading */
+    color: #333; /* Dark color for text */
+    margin-bottom: 20px; /* Space below the heading */
+    transition:  all 0.5s ease-in-out;
+}
+.home-content h1:hover {
+    color: crimson; /* Color for emphasized text on hover */
+    font-size: 2.8rem;
+}
+
+/* Styles for the span inside the heading */
+.home-content h1 span {
+    color: crimson; /* Color for emphasized text */
+    
+}
+
+/* Styles for the paragraph */
+.home-content p {
+    font-size: 1.2rem; /* Font size for the paragraph */
+    color: #666; /* Medium gray color for text */
+    margin-bottom: 30px; /* Space below the paragraph */
+    transition:  all 0.5s ease-in-out;
+}
+.home-content p:hover {
+    color: #333; /* Dark color for text on hover */
+    transform: scale(1.1);
+    
+}
+
+/* Styles for the button */
 
 
+.home-content .btn button {
+    background-color: crimson; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    padding: 5px 20px; /* Padding for the button */
+    font-size: 1rem; /* Font size for button text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.5s ease-in-out /* Transition for hover effect */
+    
+}
 
+/* Hover effect for the button */
+.home-content .btn button:hover {
+    background-color: #a00000; /* Darker shade on hover */
+    transform: scale(1.1);
+}
 
-/* home content */
-.home{
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: relative;
-    background-color: #a9a9a92b;
-    z-index: 0;
+/* Styles for the image */
+.home-content .img {
+    flex: 1; /* Allow image to take available space */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+   
 }
-.home .img{
-    flex: 1 1 300px;
+
+.home-content .img img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Rounded corners for the image */
+    animation: zoomIn 2s ease-in-out; /* Animation for image */
 }
-.home .img img{
-    margin-top: 30px;
-    width: 100%;
-}
-.home .content{
-    flex: 1 1 400px;
-    margin-top: 20px;
-}
-.content h1{
-    color: rgb(67, 0, 86);
-    font-weight: bold;
-    margin-left: 23px;
-    font-size: 55px;
-    text-shadow: -1px 1px 1px black;
-}
-.content h1 span{
-    color: cadetblue;
-    text-shadow: 1px 1px 1px black;
-}
-#span2{
-    color: bisque;
-}
-.content p{
-    margin-left: 23px;
-}
-.btn{
-    margin-left: 13px;
-}
-.btn button{
-    width: 150px;
-    height: 32px;
-    letter-spacing: 3px;
-    background-color: cadetblue;
-    color: white;
-    border-radius: 5px;
-    border: none;
-    transition: 0.5s ease;
-    cursor: pointer;
-}
-.btn button:hover{
-    background-color: bisque;
-    color: black;
-    border: none;
-}
-@media screen and (max-width:1200px){
-    .home{
-        height: 90vh;  
+
+/* Keyframe animation for zoomIn */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8); /* Start smaller */
+        opacity: 0; /* Start transparent */
+    }
+    100% {
+        transform: scale(1); /* End at normal size */
+        opacity: 1; /* End fully visible */
     }
 }
-@media screen and (max-width:700px){
-    .home{
-        height: 140vh;  
-    }
-}
-@media screen and (max-width:550px){
-    .home{
-        height: 110vh;  
-    }
-}
-@media screen and (max-width:420px){
-    .content h1{
-        font-size: 45px; 
-    }
-}
-@media screen and (max-width:320px){
-    .content h1{
-        font-size: 36px; 
-    }
-}
-/* home content */
-
-
-
-
-
-
 
 /* product cards */
 #product-cards{
@@ -265,82 +382,220 @@
 }
 /* product cards */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* other cards */
-#other-cards{
-    margin-top: 30px;
+#other {
+    padding: 50px; /* Padding around the content */
+    position: relative; /* Position relative for absolute elements */
+    overflow: hidden; /* Hide overflow */
 }
-#other-cards .card{
-    background-color: #a9a9a92b;
+#other .row {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    flex-wrap: wrap; /* Wrap items to the next line */
 }
-#other-cards .card h3{
-    margin-top: 30px;
-    color: black;
-    margin-left: 10px;
-    letter-spacing: 3px;
+#other .card {
+    border: 1px solid #ddd; /* Card border */
+    border-radius: 10px; /* Rounded corners */
+    /* Padding around the content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+    transition: transform 0.3s; /* Transition for hover effect */
 }
-#other-cards .card h5{
-    margin-top: 15px;
-    font-weight: 100;
-    font-size: 18px;
-    color: black;
-    margin-left: 10px;
-    letter-spacing: 3px;
-    border-bottom: 2px solid black;
-    width: 220px;   
+#other .card:hover {
+    transform: scale(1.05); /* Scale up on hover */
 }
-#other-cards .card p{
-    margin-top: 10px;
-    font-weight: 100;
-    font-size: 15px;
-    color: black;
-    margin-left: 10px;
-    letter-spacing: 3px;
+#other .card img {
+    width: 40%; /* Responsive image */
+    height: 40px; /* Image height */
+    border-radius: 10px 10px 0 0; /* Rounded corners */
 }
-#shopnow{
-    width: 130px;
-    height: 30px;
-    margin-top: 10px;
-    margin-left: 10px;
-    letter-spacing: 3px;
-    color: white;
-    background-color: black;
-    font-weight: bold;
-    border: none;
+#other .card .card-img-overlay {
+    position: absolute; /* Position absolute for overlay */
+    top: 0; /* Top position */
+    left: 0; /* Left position */
+    width: 100%; /* Overlay width */
+    height: 100%; /* Overlay height */
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay background color */
+    color: white; /* Overlay text color */
+    padding: 20px; /* Padding around the content */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+/* Animation for the other-cards section */
+#other .card {
+    animation: popUpFromRight 1s ease; /* Animation for pop up from right effect */
+}
+
+/* Keyframe animation for popUpFromRight */
+@keyframes popUpFromRight {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+        opacity: 0; /* Start transparent */
+        transform: scale(0.5); /* Start at 50% size */
+    }
+    50% {
+        transform: translateX(50%); /* Move to the middle */
+        opacity: 0.5; /* 50% opacity */
+        transform: scale(0.8); /* 80% size */
+    }
+    100% {
+        transform: translateX(0); /* End at normal position */
+        opacity: 1; /* End fully visible */
+        transform: scale(1); /* End at normal size */
+    }
+}
+
+/* Animation for the card image */
+#other .card img {
+    animation: fadeIn 1s ease; /* Animation for fade in effect */
+}
+
+/* Keyframe animation for fadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start transparent */
+    }
+    100% {
+        opacity: 1; /* End fully visible */
+    }
+}
+
+/* Animation for the card overlay */
+#other .card .card-img-overlay {
+    animation: slideInLeft 1s ease; /* Animation for slide in left effect */
+}
+
+/* Keyframe animation for slideInLeft */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+        opacity: 0; /* Start transparent */
+    }
+    100% {
+        transform: translateX(0); /* End at normal position */
+        opacity: 1; /* End fully visible */
+    }
+}
+
+/* Animation for the card title */
+#other .card .card-img-overlay h3 {
+    animation: bounceIn 1s ease; /* Animation for bounce in effect */
+}
+
+/* Keyframe animation for bounceIn */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5); /* Start at 50% size */
+        opacity: 0; /* Start transparent */
+    }
+    50% {
+        transform: scale(1.2); /* Stretch to 120% */
+        opacity: 0.5; /* 50% opacity */
+    }
+    100% {
+        transform: scale(1); /* End at normal size */
+        opacity: 1; /* End fully visible */
+    }
+}
+
+/* Animation for the card text */
+#other .card .card-img-overlay p {
+    animation: fadeInUp 1s ease 0.5s; /* Animation for fade in up effect with delay */
+}
+
+/* Keyframe animation for fadeInUp */
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(100%); /* Start below the card */
+        opacity: 0; /* Start transparent */
+    }
+    100% {
+        transform: translateY(0); /* End at normal position */
+        opacity: 1; /* End fully visible */
+    }
+}
+/* Offer Section Styles */
+
+#offer {
+    padding: 5px;
+}
+
+#offer .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#offer .col-md-3 {
+    margin-left: -20px;
+    margin-right: -10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#offer .col-md-3:hover {
     cursor: pointer;
+    background-color: bisque;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
-@media screen and (max-width: 1000px){
-    #other-cards .card h3{
-        margin-top: 5px;
-        font-size: 20px;
+
+#offer .fa-solid {
+    margin-top: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: cadetblue;
+}
+
+#offer h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#offer p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+/* Animation for the offer headings */
+#offer h3 {
+    animation: slideInLeft 1s ease; /* Animation for slide in left effect */
+}
+
+/* Keyframe animation for slideInLeft */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%); /* Start from the left */
+        opacity: 0; /* Start transparent */
     }
-    #other-cards .card h5{
-        margin-top: 5px;
-        font-size: 15px;
-    }
-    #other-cards .card p{
-        margin-bottom: 0px;
-    }
-    #shopnow{
-        margin-top: 0px;
-        width: 120px;
-        height: 30px;
-        font-size: 16px;
+    100% {
+        transform: translateX(0); /* End at normal position */
+        opacity: 1; /* End fully visible */
     }
 }
-/* other cards */
+
+/* Animation for the offer text */
+#offer p {
+    animation: fadeIn 1s ease 0.5s; /* Animation for fade in effect with delay */
+}
+
+/* Keyframe animation for fadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start transparent */
+    }
+    100% {
+        opacity: 1; /* End fully visible */
+    }
+}
+
+
+
+
+
+
+
 
 
 /* banner */
@@ -460,168 +715,273 @@
 
 
 
-/* offer */
-#offer{
-    margin-top: 100px;
-    margin-left: 150px;
+
+/* newslater */
+/* Newsletter Section Styles */
+#newslater {
+     /* Light gray background */
+    padding: 50px 50px; /* Add padding */
+    text-align: center; /* Center the text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
-#offer i{
-    font-size: 32px;
+
+#newslater h3 {
+    font-size: 24px; /* Increase heading size */
+    margin-bottom: 10px; /* Space between heading and text */
+    font-weight: bold; /* Bold headings */
+    color: black; /* Dark gray text color */
+}
+
+#newslater .input {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the input field */
+    align-items: center; /* Center the input field vertically */
+    margin-bottom: 20px; /* Space between input field and button */
+}
+
+#newslater input[type="text"] {
+    width: 70%; /* Set the width of the input field */
+    height: 40px; /* Set the height of the input field */
+    padding: 10px; /* Add padding to the input field */
+    margin-right: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Increase font size */
+}
+
+#newslater #subscribe {
+    width: 30%; /* Set the width of the button */
+    height: 40px; /* Set the height of the button */
+    padding: 10px; /* Add padding to the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+     /* Green background color */
+    color: black;/* White text color */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; /* Change cursor to pointer */
+}
+#newslater #subscribe:hover{
     color: black;
+    background-color: pink;
 }
-/* offer */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #newslater {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+    #newslater input[type="text"] {
+        width: 80%; /* Increase width of input field on smaller screens */
+    }
+    #newslater button[type="button"] {
+        width: 20%; /* Increase width of button on smaller screens */
+    }
+}
+/* Animation for the newsletter section */
+#newslater {
+    animation: fadeInUp 1s ease; /* Animation for fade in up effect */
+}
+
+/* Keyframe animation for fadeInUp */
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(100%); /* Start below the viewport */
+        opacity: 0; /* Start transparent */
+    }
+    100% {
+        transform: translateY(0); /* End at normal position */
+        opacity: 1; /* End fully visible */
+    }
+}
+
+/* Animation for the newsletter input field */
+#newslater input[type="text"] {
+    animation: fadeIn 1s ease 0.5s; /* Animation for fade in effect with delay */
+}
+
+/* Keyframe animation for fadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start transparent */
+    }
+    100% {
+        opacity: 1; /* End fully visible */
+    }
+}
+
+/* Animation for the newsletter button */
+#newslater button[type="button"] {
+    animation: bounceIn 1s ease 1s; /* Animation for bounce in effect with delay */
+}
+
+/* Keyframe animation for bounceIn */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5); /* Start at 50% size */
+        opacity: 0; /* Start transparent */
+    }
+    50% {
+        transform: scale(1.2); /* Stretch to 120% */
+        opacity: 0.5; /* 50% opacity */
+    }
+    100% {
+        transform: scale(1); /* End at normal size */
+        opacity: 1; /* End fully visible */
+    }
+}
+
+/* Animation for the newsletter button on hover */
+#newslater button[type="button"]:hover {
+    animation: pulse 1s ease infinite; /* Animation for pulse effect */
+}
+
+/* Keyframe animation for pulse */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Start at normal size */
+        background-color: #4CAF50; /* Green background color */
+    }
+    50% {
+        transform: scale(1.1); /* Stretch to 110% */
+        background-color: #3e8e41; /* Darker green background color */
+    }
+    100% {
+        transform: scale(1); /* End at normal size */
+        background-color: #4CAF50; /* Green background color */
+    }
+}
+
+/* Animation for the newsletter section on focus */
+#newslater input[type="text"]:focus {
+    animation: shake 1s ease; /* Animation for shake effect */
+}
+
+/* Keyframe animation for shake */
+@keyframes shake {
+    0% {
+        transform: translateX(0); /* Start at normal position */
+    }
+    20% {
+        transform: translateX(-10px); /* Move left by 10px */
+    }
+    40% {
+        transform: translateX(10px); /* Move right by 10px */
+    }
+    60% {
+        transform: translateX(-10px); /* Move left by 10px */
+    }
+    80% {
+        transform: translateX(10px); /* Move right by 10px */
+    }
+    100% {
+        transform: translateX(0); /* End at normal position */
+    }
+}
+
+/* Animation for the newsletter section on submit */
+#newslater button[type="button"]:active {
+    animation: zoomIn 1s ease; /* Animation for zoom in effect */
+}
+
+/* Keyframe animation for zoomIn */
+@keyframes zoomIn {
+    0% {
+        transform: scale(1); /* Start at normal size */
+    }
+    100% {
+        transform: scale(1.2); /* End at 120% size */
+    }
+}
+
+
+
 
 
 
 /* newslater */
-#newslater{
-    margin-top: 100px;
+
+
+/* Footer Styles */
+#footer {
+    background-color: cadetblue; /* Dark background color */
+    color: black; /* Text color */
+    padding: 40px 0; /* Padding for top and bottom */
 }
-#newslater h3{
-    font-size: 25px;
-    letter-spacing: 3px;
+
+.footer-top {
+    display: flex; /* Flexbox layout */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-between; /* Space between items */
 }
-.input{
-    margin-top: 30px;
+
+.footer-links ul {
+    list-style: none; /* Remove default list style */
+    padding: 0; /* Remove default padding */
 }
-.input input{
-    width: 350px;
-    height: 36px;
-    letter-spacing: 2px;
-    border-radius: 3px;
-    border: 1px solid black;
-    padding-left: 5px;
+
+.footer-links ul li {
+    margin: 10px 0; /* Margin for list items */
 }
-#subscribe{
-    width: 200px;
-    height: 36px;
-    margin-left: 10px;
-    border-radius: 3px;
-    border: none;
-    background-color: cadetblue;
-    color: white;
-    letter-spacing: 3px;
-    font-weight: bold;
-    text-shadow: 0px 0px 1px black;
+
+.footer-links ul li a {
+    color: black; /* Link color */
+    text-decoration: none; /* Remove underline */
 }
-@media screen and (max-width:465px){
-    .input input{
-        width: 280px;
+
+.footer-links ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.social-links {
+    display: flex; /* Flexbox layout for social links */
+    gap: 10px; /* Space between icons */
+}
+
+.social-links a {
+    color: black; /* Icon color */
+    font-size: 24px; /* Icon size */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.social-links a:hover {
+    color: #b058c0 /* Change color on hover */
+}
+
+.copyright {
+    text-align: center; /* Center text */
+    margin-top: 20px; /* Margin for spacing */
+}
+
+.credits {
+    text-align: center; /* Center text */
+    margin-top: 10px; /* Margin for spacing */
+    color: #c93748; /* Credits color */
+}
+.credits a{
+    color: blueviolet;
+}
+
+#footer {
+    animation: slideIn 2s;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
     }
-    #subscribe{
-        margin-top: 10px;
+    100% {
+        transform: translateY(0);
     }
 }
-@media screen and (max-width:250px){
-    .input input{
-        width: 150px;
-    }
-    #subscribe{
-        width: 150px;
-    }
-}
-/* newslater */
 
 
 
 
-/* footer */
-#footer{
-    padding: 0 0 30px 0px;
-    color: white;
-    font-size: 14px;
-    background-color: rgb(67, 0, 86);
-    margin-top: 100px;
-}
-#footer .footer-top{
-    padding: 60px 0 30px 0;
-    background-color: rgb(67, 0, 86);
-    color: white;
-}
-#footer .footer-top .footer-contact{
-    margin-bottom: 30px;
-}
-#footer .footer-top .footer-contact h3{
-    color: #ffc800;
-}
-#footer .footer-top .footer-contact h4{
-    font-size: 22px;
-    margin: 0 0 30px 0;
-    padding: 2px 0 2px 0;
-    line-height: 1;
-    font-weight: 700;
-}
-#footer .footer-top .footer-contact p{
-    font-size: 14px;
-    line-height: 24px;
-    margin-bottom: 0;
-    color: white;
-}
-#footer .footer-top h4{
-    font-size: 16px;
-    font-weight: bold;
-    position: relative;
-    padding-bottom: 12px;
-}
-#footer .footer-top .footer-links{
-    margin-bottom: 30px;
-    margin-top: 10px;
-}
-#footer .footer-top .footer-links h4{
-    color: bisque;
-}
-#footer .footer-top .footer-links ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-#footer .footer-top .footer-links ul li{
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-}
-#footer .footer-top .footer-links ul li a{
-    text-decoration: none;
-    color: white;
-    display: inline-block;
-    line-height: 1;
-    font-weight: bold;
-    transition: 0.5s ease;
-}
-#footer .footer-top .footer-links ul li a:hover{
-    color: bisque;
-}
-#footer .footer-top .social-links a{
-    font-size: 18px;
-    display: inline-block;
-    text-decoration: none;
-    background-color: #37373737;
-    color: white;
-    line-height: 1;
-    padding: 8px 0;
-    margin-right: 4px;
-    border-radius: 50%;
-    text-align: center;
-    width: 36px;
-    transition: 0.5s ease;
-}
-#footer .footer-top .social-links a:hover{
-    background-color: bisque;
-    color: white;
-}
-#footer .copyright{
-    text-align: center;
-    float: left;
-}
-#footer .credits{
-    float: right;
-    text-align: center;
-    font-size: 13px;
-}
-#footer .credits a{
-    color: bisque;
-}
-/* footer */
+
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -640,67 +1000,54 @@ html{
 
 
 /* login */
-#login{
-    width: 65%;
-    height: 70vh;
-    background-color: cadetblue;
-    margin-top: 35px;
+#login-container {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
     border-radius: 10px;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-#side1 h3{
-    color: bisque;
-    font-weight: bold;
-    margin-top: 200px;
+
+#login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
-#side2{
-    background-color: white;
-    height: 70vh;
-    border-radius: 10px;
+
+#login-form {
+    margin-top: 20px;
 }
-#side2 h3{
-    margin-top: 30px;
-    color: cadetblue;
-    font-weight: bold;
-    text-shadow: 0px 1px 1px black;
-}
-.input2 input{
-    margin-top: 15px;
-    width: 350px;
-    border: none;
-    border-bottom: 2px solid bisque;
-}
-.input2 input ::placeholder{
-    font-weight: bold;
-}
-#btnlogin{
-    padding-top: 10px;
-}
-#btnlogin a{
+
+#login-form input[type="text"], .login-form input[type="password"] {
+    width: 100%;
     padding: 10px;
-    text-decoration: none;
-    border-radius: 15px;
-    background-color: cadetblue;
-    color: bisque;
-    font-weight: bold;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
     border: none;
-    text-shadow: 0px 0px 1px black;
+    border-radius: 5px;
+    cursor: pointer;
 }
-#side2 p{
-    margin-top: 10px;
+
+#login-form input[type="submit"]:hover {
+    background-color: #3e8e41;
 }
-@media screen and (max-width:991px){
-    .input input{
-        width: 250px;
-    }
+
+#login-form a {
+    text-decoration: none;
+    color: #4CAF50;
 }
-@media screen and (max-width:765px){
-    .input input{
-        width: 260px;
-    }
-    #side2{
-        height: 60vh;
-    }
+
+#login-form a:hover {
+    color: red;
 }
 /* login */
 
@@ -790,9 +1137,4 @@ html{
     margin-right: 2px;
 }
 
-/* about */
-
-
-
-
-
+/* about */
